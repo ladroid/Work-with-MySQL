@@ -68,7 +68,7 @@ const server = http.createServer((req, res)=>{
   });
 });
 router.get('/user/:id', function(req, res) { // When visiting 'search'
-	var id = req.params.id; // For example if you visit localhost/user/24 the id will be 24
+	var id = req.params.id; 
 	connection.query('SELECT * FROM bankdb.account WHERE id=' + mysql.escape( id ), function(err, results, fields) {
 		console.log('Read!');
     	if(err) throw err;
